@@ -1,4 +1,4 @@
-import type { NavLink } from "~/types/Navbar";
+import { NavLink } from "src/types/Navbar";
 
 const TOP_CITIES_LINKS: NavLink[] = [
   {
