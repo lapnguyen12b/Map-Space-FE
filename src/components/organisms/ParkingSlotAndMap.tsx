@@ -1,5 +1,5 @@
 import React from "react";
-import { ParkingSlotCard } from "../molecules";
+import { Map, ParkingSlotCard } from "../molecules";
 
 export const ParkingSlotAndMap = () => {
   return (
@@ -13,7 +13,9 @@ export const ParkingSlotAndMap = () => {
             ))}
         </div>
       </div>
-      <div>right</div>
+      <div>
+        <Map />
+      </div>
     </div>
   );
 };
