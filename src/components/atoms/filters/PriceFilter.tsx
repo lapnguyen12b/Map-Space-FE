@@ -5,21 +5,26 @@ import { Button } from "../Button";
 
 import { useDetectClickOutside } from "react-detect-click-outside";
 import { cn } from "src/utils";
+import { FilterDropdown } from "src/types";
 
-export const PriceFilterDropdown = ({
-  closeDropdown,
-}: {
-  closeDropdown: (e: Event) => void;
-}) => {
+export const PriceFilterDropdown = (props: FilterDropdown) => {
+  const { closeDropdown, displayDropdown, className } = props;
   const ref = useDetectClickOutside({
     onTriggered: closeDropdown,
   });
 
+  const classNameMerge = cn(
+    className,
+    {
+      "opacity-100": displayDropdown,
+    },
+    {
+      "opacity-0": !displayDropdown,
+    }
+  );
+
   return (
-    <div
-      ref={ref}
-      className={`absolute transition ease-linear duration-300 left-0 top-[calc(100%_+_4px)] bg-white rounded-2xl w-[300px] shadow-lg border border-zinc-500 opacity-100`}
-    >
+    <div ref={ref} className={classNameMerge}>
       <div className="p-3 flex flex-col gap-3">
         <Text>Show listings priced between</Text>
         <div className="flex items-center justify-between">

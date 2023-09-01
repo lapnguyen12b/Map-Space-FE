@@ -3,4 +3,10 @@ type Option = {
   label: string;
 };
 
-export type { Option };
+type FilterDropdown = {
+  displayDropdown: boolean;
+  closeDropdown: (e: Event) => void;
+  className?: string;
+};
+
+export type { Option, FilterDropdown };
