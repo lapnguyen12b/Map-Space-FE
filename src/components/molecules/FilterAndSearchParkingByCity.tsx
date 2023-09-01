@@ -1,13 +1,22 @@
 import React from "react";
-import { SearchBox, SelectInput } from "..";
+import { FilterWrapper, MoreFilter, SearchBox, SelectInput } from "..";
 import { OPTIONS_SEARCH_BY_MONTHLY_DAILY } from "src/constants";
 
 function FilterAndSearchParkingByCity() {
   return (
-    <div className="">
-      <div className="grid grid-cols-[auto_1fr] gap-5 auto-rows-auto">
+    <div className="relative">
+      <div className="grid grid-cols-[auto_1fr] gap-5 auto-rows-auto relative z-10">
         <SelectInput options={OPTIONS_SEARCH_BY_MONTHLY_DAILY} />
         <SearchBox />
+      </div>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <FilterWrapper variant="price" title="Price" />
+          <FilterWrapper variant="type" title="Type" />
+          <FilterWrapper variant="distance" title="Distance" />
+        </div>
+
+        <MoreFilter />
       </div>
     </div>
   );

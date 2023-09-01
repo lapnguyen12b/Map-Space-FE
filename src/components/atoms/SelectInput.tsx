@@ -32,14 +32,16 @@ function SelectInput(props: SelectInputProps) {
         <ChevronDownIcon className="h-4 w-4" />
       </div>
       <ul
-        className={`absolute top-[calc(100%_+_4px)] bg-zinc-800 w-full rounded ${
-          showOptions ? "block" : "hidden"
+        className={`absolute top-[calc(100%_+_4px)] bg-zinc-800 w-full transition ease-linear duration-300 rounded  ${
+          showOptions ? "opacity-100" : "opacity-0"
         }`}
       >
         {options.map((option) => (
           <li
             key={`select-${option.value}`}
-            className="h-10 flex items-center border-b px-2 last:border-none select-none"
+            className={`${
+              showOptions ? " opacity-100" : "opacity-0 hidden"
+            } flex items-center border-b px-2 last:border-none select-none h-10`}
             onClick={() => {
               setSelectedOption(option);
               setShowOptions(false);
