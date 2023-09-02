@@ -22,10 +22,10 @@ export const Breadcrumb = ({
   const classNameMerge = cn(className);
   return (
     <BaseBreadcrumb className={classNameMerge}>
-      {breadcrumbs.map((b) => (
+      {breadcrumbs.map((b, index) => (
         <BaseBreadcrumb.Item
           key={`breadcrumb-${b.name}`}
-          href={b.href}
+          href={index !== breadcrumbs.length - 1 ? b.href : undefined}
           icon={b.icon}
           className={cn(classNameBreadcrumbItem)}
         >

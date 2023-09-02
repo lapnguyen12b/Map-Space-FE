@@ -22,7 +22,7 @@ const customTheme: CustomFlowbiteTheme["accordion"] = {
 
 export const AccordionQuestions = () => {
   return (
-    <Accordion flush collapseAll theme={customTheme}>
+    <Accordion collapseAll flush theme={customTheme}>
       <Accordion.Panel>
         <Accordion.Title>What is Flowbite?</Accordion.Title>
         <Accordion.Content>

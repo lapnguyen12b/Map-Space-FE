@@ -1,3 +1,5 @@
+export * from "./Parking";
+
 type Option = {
   value: string;
   label: string;

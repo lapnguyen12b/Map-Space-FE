@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-type TextVariant = "h1" | "h2" | "h3" | "h4" | "h5";
+type TextVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "base";
 
 const textVariant: Record<TextVariant, string> = {
   h1: "text-3xl",
@@ -8,6 +8,7 @@ const textVariant: Record<TextVariant, string> = {
   h3: "text-lg",
   h4: "text-sm",
   h5: "text-xs",
+  base: "text-base",
 };
 
 type TextOwnProps<E extends React.ElementType> = {
@@ -27,6 +28,6 @@ export const Text = <E extends React.ElementType = "p">({
   as,
 }: TextProps<E>) => {
   const Component = as ?? "p";
-  const classNameMerge = twMerge(className, textVariant[variant]);
+  const classNameMerge = twMerge(textVariant[variant], "break-all", className);
   return <Component className={classNameMerge}>{children}</Component>;
 };
