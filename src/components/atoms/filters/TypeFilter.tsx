@@ -19,7 +19,7 @@ const CheckBoxRow = () => {
   );
 };
 
-export const TypeFilterDropdown = (props: FilterDropdown) => {
+const TypeFilterDropdown = (props: FilterDropdown) => {
   const { closeDropdown, displayDropdown, className } = props;
   const ref = useDetectClickOutside({
     onTriggered: closeDropdown,
@@ -54,3 +54,5 @@ export const TypeFilterDropdown = (props: FilterDropdown) => {
     </div>
   );
 };
+
+export default React.memo(TypeFilterDropdown);

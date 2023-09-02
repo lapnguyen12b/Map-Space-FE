@@ -7,7 +7,7 @@ import { TOP_CITIES_LINKS } from "src/constants";
 
 export default function NavBar() {
   return (
-    <Navbar className="h-18 sticky top-0 flex items-center justify-between shadow">
+    <Navbar className="h-18 sticky top-0 flex items-center justify-between shadow z-20">
       <Navbar.Brand href="/">
         <Image
           alt="Flowbite React Logo"

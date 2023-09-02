@@ -13,6 +13,8 @@ export const PriceFilterDropdown = (props: FilterDropdown) => {
     onTriggered: closeDropdown,
   });
 
+  console.count("PriceFilterDropdown");
+
   const classNameMerge = cn(
     className,
     {
