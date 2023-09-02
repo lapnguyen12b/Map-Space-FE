@@ -13,6 +13,7 @@ export const Intro = ({ className }: IntroProps) => {
       <Text as="h3" variant="h3" className="font-bold">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, minima.
       </Text>
+      <br />
       <Text>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
         exercitationem dolorum. Illum tenetur nam aperiam ea explicabo. Est
@@ -31,7 +32,8 @@ export const Intro = ({ className }: IntroProps) => {
         Architecto eius suscipit, odit tempora eveniet nihil vero rem ducimus
         dolorem. Officia, iusto?
       </Text>
-
+      <br />
+      <br />
       <div className="border border-zinc-500 bg-gradient-to-r from-green-100 to-green-300 grid grid-cols-[auto_1fr] gap-5">
         <Image
           src={"https://picsum.photos/id/247/80/80"}

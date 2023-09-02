@@ -15,7 +15,7 @@ function ParkingByCity({ params }: { params: { city: string } }) {
 
       <LayoutPage className="mt-3">
         <Intro className="col-start-2 col-span-1" />
-        <CommonQuestions className="col-start-2 col-span-1 mt-10" />
+        <CommonQuestions className="col-start-2 col-span-1 mt-10" city={city} />
       </LayoutPage>
     </div>
   );

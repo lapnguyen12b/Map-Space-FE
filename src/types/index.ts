@@ -12,4 +12,10 @@ type FilterDropdown = ClassName & {
   closeDropdown: (e: Event) => void;
 };
 
-export type { Option, FilterDropdown, ClassName };
+type Breadcrumb = {
+  name: string;
+  href: string;
+  icon?: React.FC<React.SVGProps<SVGSVGElement>> | undefined;
+};
+
+export type { Option, FilterDropdown, ClassName, Breadcrumb };

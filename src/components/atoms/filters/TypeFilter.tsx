@@ -27,10 +27,10 @@ const TypeFilterDropdown = (props: FilterDropdown) => {
   const classNameMerge = cn(
     className,
     {
-      "opacity-100": displayDropdown,
+      "opacity-100 visible": displayDropdown,
     },
     {
-      "opacity-0": !displayDropdown,
+      "opacity-0 invisible": !displayDropdown,
     }
   );
   return (

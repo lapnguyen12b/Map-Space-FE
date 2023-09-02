@@ -13,15 +13,13 @@ export const PriceFilterDropdown = (props: FilterDropdown) => {
     onTriggered: closeDropdown,
   });
 
-  console.count("PriceFilterDropdown");
-
   const classNameMerge = cn(
     className,
     {
-      "opacity-100": displayDropdown,
+      "opacity-100 visible": displayDropdown,
     },
     {
-      "opacity-0": !displayDropdown,
+      "opacity-0 invisible": !displayDropdown,
     }
   );
 
