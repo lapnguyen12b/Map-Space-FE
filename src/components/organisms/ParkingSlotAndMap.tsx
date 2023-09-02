@@ -10,7 +10,7 @@ import {
 export const ParkingSlotAndMap = () => {
   return (
     <div className="grid h-full grid-cols-1 2xl:grid-cols-[2fr_5fr]">
-      <div className=" h-full overflow-y-auto grid grid-rows-[1fr_auto] grid-cols-[12px_1fr_12px] bg-[#f2f4f5]">
+      <section className=" h-full overflow-y-auto grid grid-rows-[1fr_auto] grid-cols-[12px_1fr_12px] bg-[#f2f4f5]">
         <div className="col-start-2 col-span-1 mt-3">
           <FilterAndSearchParkingByCity />
           <div className="flex flex-col gap-8 mt-2">
@@ -26,8 +26,8 @@ export const ParkingSlotAndMap = () => {
         <div className="col-start-1 col-end-4 mt-3">
           <PaginationFooter />
         </div>
-      </div>
-      <div>{/* <Map /> */}</div>
+      </section>
+      <section>{/* <Map /> */}</section>
     </div>
   );
 };
