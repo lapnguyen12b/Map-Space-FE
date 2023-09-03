@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "../organisms/Navbar";
-import Head from "next/head";
 import { HeaderBanner } from "../atoms/HeaderBanner";
 
 type LayoutProps = React.PropsWithChildren;

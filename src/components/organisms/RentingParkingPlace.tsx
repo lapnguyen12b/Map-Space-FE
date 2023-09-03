@@ -2,7 +2,6 @@ import React from "react";
 import { ClassName } from "src/types";
 import { cn } from "src/utils";
 import { Text } from "..";
-import { Button } from "../atoms/Button";
 import Link from "next/link";
 
 type RentingParkingPlaceProps = ClassName;

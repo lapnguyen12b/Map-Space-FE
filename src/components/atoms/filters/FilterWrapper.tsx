@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { cn } from "src/utils";
 import { Text } from "..";
 import { PriceFilterDropdown } from "./PriceFilter";

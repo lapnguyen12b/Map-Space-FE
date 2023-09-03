@@ -1,7 +1,6 @@
 import React from "react";
 import {
   FilterAndSearchParkingByCity,
-  Map,
   NotifyCard,
   PaginationFooter,
   ParkingSlotCard,
