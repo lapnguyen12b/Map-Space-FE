@@ -3,3 +3,5 @@ export { SvgParkhound } from "./SvgParkhound";
 export { SvgSpacerMini } from "./SvgSpacerMini";
 export { SvgSpacerMini1 } from "./SvgSpacerMini1";
 export { SvgWhereIPark } from "./SvgWhereIPark";
+export { SvgAppStore } from "./SvgAppStore";
+export { SvgPlayStore } from "./SvgPlayStore";
