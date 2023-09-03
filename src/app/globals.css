@@ -22,3 +22,18 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.footer-trace {
+  /* newlines for clarity */
+  @apply bg-[url:theme("backgroundImage.trace"),_theme("backgroundImage.gradient-to-r")];
+  @apply bg-no-repeat;
+  @apply bg-cover;
+  @apply bg-center;
+  @apply from-black;
+  @apply from-40%;
+  @apply to-transparent;
+  @apply bg-blend-overlay;
+  /* styles needed for the example */
+  @apply w-full;
+  @apply h-[240px];
+}

@@ -28,6 +28,10 @@ export const Text = <E extends React.ElementType = "p">({
   as,
 }: TextProps<E>) => {
   const Component = as ?? "p";
-  const classNameMerge = twMerge(textVariant[variant], "break-all", className);
+  const classNameMerge = twMerge(
+    textVariant[variant],
+    "break-words",
+    className
+  );
   return <Component className={classNameMerge}>{children}</Component>;
 };
