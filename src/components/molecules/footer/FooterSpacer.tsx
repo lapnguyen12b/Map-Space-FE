@@ -15,7 +15,7 @@ type FooterSpacerProps = ClassName;
 export const FooterSpacer = ({ className }: FooterSpacerProps) => {
   return (
     <div className={cn(className)}>
-      <div className='mx-auto mt-8 flex w-1/2 flex-col items-center justify-center gap-10 2xl:w-full'>
+      <div className='mx-auto mt-8 flex flex-col items-center justify-center gap-10 md:w-4/5 lg:w-1/2 2xl:w-full'>
         <Text className='text-gray-500'>
           Parkhound is a part of the Spacer Technologies Group
         </Text>

@@ -3,7 +3,7 @@ import { Text } from 'src/components';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+    <div className='h-[calc(100%_-_62px_-_32px)]'>
       <Link
         href={{
           pathname: '/parking/hanoi',
@@ -13,6 +13,6 @@ export default function Home() {
           to the city
         </Text>
       </Link>
-    </main>
+    </div>
   );
 }

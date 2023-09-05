@@ -8,7 +8,7 @@ import {
 
 export const FooterNavigation = () => {
   return (
-    <div className='grid grid-cols-3 px-4 py-8'>
+    <div className='grid grid-cols-1 gap-5 px-4 py-8 md:grid-cols-2 lg:grid-cols-3'>
       <section>
         <Text as='h3' className='font-semibold'>
           Connect with us
@@ -28,7 +28,7 @@ export const FooterNavigation = () => {
           ))}
         </ul>
       </section>
-      <section className='2xl:order-3'>
+      <section className='order-3 md:order-2 lg:order-3'>
         <Text as='h3' className='font-semibold'>
           Navigation
         </Text>
@@ -43,7 +43,7 @@ export const FooterNavigation = () => {
           ))}
         </ul>
       </section>
-      <section className='2xl:order-2'>
+      <section className='order-2 md:order-3 lg:order-2'>
         <Text as='h3' className='font-semibold'>
           Popular blog articles
         </Text>
