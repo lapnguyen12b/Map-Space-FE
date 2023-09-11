@@ -11,4 +11,8 @@ const OPTIONS_SEARCH_BY_MONTHLY_DAILY: Option[] = [
   },
 ];
 
-export { OPTIONS_SEARCH_BY_MONTHLY_DAILY };
+const URLS = {
+  CITY_TOP: '/city-capital/top',
+};
+
+export { OPTIONS_SEARCH_BY_MONTHLY_DAILY, URLS };
