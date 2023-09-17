@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${inter.variable} ${raleway.variable} font-sans`}>
-        <Toaster position='top-center' reverseOrder={false} />
+        <Toaster position='top-right' reverseOrder={false} />
         <Layout>{children}</Layout>
       </body>
     </html>
