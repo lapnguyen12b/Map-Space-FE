@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import { IMAGES } from 'src/constants';
 import { SearchBox, Text } from '..';

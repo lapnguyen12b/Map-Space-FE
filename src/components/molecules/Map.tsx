@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import React from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import React from 'react';
 
 const containerStyle = {
-  width: "100%",
-  height: "100%",
+  width: '100%',
+  height: '100%',
 };
 
 const center = {
@@ -15,9 +15,11 @@ const center = {
 
 function Map() {
   const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: process.env.GOOGLE_MAP_API_KEY || "",
+    id: 'google-map-script',
+    googleMapsApiKey: process.env.GOOGLE_MAP_API_KEY || '',
   });
+
+  console.log('📢 [Map.tsx:22]', 'render in Map');
 
   const [map, setMap] = React.useState<google.maps.Map | null>(null);
 
