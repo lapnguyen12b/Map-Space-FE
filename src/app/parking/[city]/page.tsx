@@ -1,5 +1,4 @@
 import {
-  Breadcrumb,
   CommonQuestions,
   ContentAndParkingInfo,
   Intro,
@@ -7,7 +6,6 @@ import {
   ParkingSlotAndMap,
   RentingParkingPlace,
 } from 'src/components';
-import { BREADCRUMB_PAGE_BY_CITY } from 'src/constants';
 import {
   PARKING_BY_CITY_CONTENT,
   PARKING_BY_CITY_NEARBY,
@@ -21,10 +19,10 @@ function ParkingByCity({ params }: { params: { city: string } }) {
       <ParkingSlotAndMap />
 
       <LayoutPage className='pt-3'>
-        <Breadcrumb
+        {/* <Breadcrumb
           breadcrumbs={BREADCRUMB_PAGE_BY_CITY}
           className='col-span-1 col-start-2 bg-slate-500/10 px-2 py-1'
-        />
+        /> */}
         <Intro className='col-span-1 col-start-2' />
         <CommonQuestions className='col-span-1 col-start-2 mt-10' city={city} />
 
