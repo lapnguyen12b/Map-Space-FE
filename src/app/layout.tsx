@@ -1,9 +1,9 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient } from '@tanstack/react-query';
 import type { Metadata } from 'next';
 import { Inter, Raleway } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
 import { Layout } from 'src/components';
 import './globals.css';
-
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' });
 
@@ -22,9 +22,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${inter.variable} ${raleway.variable} font-sans`}>
-        <QueryClientProvider client={queryClient}>
-          <Layout>{children}</Layout>
-        </QueryClientProvider>
+        <Toaster position='top-center' reverseOrder={false} />
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

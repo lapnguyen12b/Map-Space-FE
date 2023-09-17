@@ -1,12 +1,9 @@
 'use client';
 import Image from 'next/image';
 import { IMAGES } from 'src/constants';
-import { useGetCityTop } from 'src/hooks/useGetCityTop';
 import { SearchBox, Text } from '..';
 
 export const HomeBanner = () => {
-  const { data: cityTopData } = useGetCityTop();
-
   return (
     <div className=' relative h-[63%]'>
       <div className='absolute inset-0'>

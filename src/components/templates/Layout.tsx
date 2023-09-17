@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '..';
+import { Footer, Notifications } from '..';
 import { HeaderBanner } from '../atoms/HeaderBanner';
 import NavBar from '../organisms/Navbar';
 
@@ -12,7 +12,10 @@ export const Layout = ({ children }: LayoutProps) => {
         <HeaderBanner />
         <NavBar />
       </header>
-      <main className='h-full min-h-[100dvh]'>{children}</main>
+      <main className='h-full min-h-[100dvh]'>
+        <Notifications />
+        {children}
+      </main>
       <Footer />
     </>
   );

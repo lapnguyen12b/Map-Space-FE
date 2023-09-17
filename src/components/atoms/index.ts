@@ -1,5 +1,5 @@
-export { Breadcrumb } from './Breadcrumb';
 export { CardContentHomePage } from './CardContentHomePage';
+export { DefaultBreadcrumb } from './DefaultBreadcrumb';
 export { NavDropDown } from './NavDropDown';
 export { SearchBox } from './SearchBox';
 export { default as SelectInput } from './SelectInput';

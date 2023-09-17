@@ -8,5 +8,6 @@ export { HomeParkingByCity } from './HomeParkingByCity';
 export { HomeParkingRentCalculator } from './HomeParkingRentCalculator';
 export { Intro } from './Intro';
 export { default as Navbar } from './Navbar';
+export { Notifications } from './Notifications';
 export { ParkingSlotAndMap } from './ParkingSlotAndMap';
 export { RentingParkingPlace } from './RentingParkingPlace';
