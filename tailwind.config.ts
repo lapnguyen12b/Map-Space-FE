@@ -24,6 +24,7 @@ const config: Config = {
         trace: "url('/img/footer-sec.jpg')",
         banner: 'url(/img/header-bg-home.jpg)',
         mapbanner: 'url(/img/map-banner.jpg)',
+        leasebtn: 'url(/icon/btn-yellow.svg)',
       },
     },
   },

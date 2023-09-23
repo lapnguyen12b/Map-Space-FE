@@ -11,7 +11,7 @@ type LayoutProps = React.PropsWithChildren;
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <header>
+      <header style={{ display: 'unset' }}>
         <HeaderBanner />
         <NavBar />
       </header>
