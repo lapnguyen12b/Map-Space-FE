@@ -1,7 +1,6 @@
 import Map from 'react-map-gl';
 
 export const MapBox = () => {
-  console.log('📢 [MapBox.tsx:4]', process.env.MAPBOX_API_KEY);
   return (
     <Map
       mapboxAccessToken={process.env.MAPBOX_API_KEY}
