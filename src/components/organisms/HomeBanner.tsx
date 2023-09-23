@@ -1,14 +1,9 @@
-import Image from 'next/image';
-import { IMAGES } from 'src/constants';
 import { SearchBox, Text } from '..';
 
 export const HomeBanner = () => {
   return (
-    <div className=' relative h-[63%]'>
-      <div className='absolute inset-0'>
-        <Image src={IMAGES.headerBgHome} fill alt='' className='object-cover' />
-      </div>
-      <div className='absolute inset-0 grid w-full grid-cols-[3fr_1fr] md:grid-cols-[3fr_3fr] lg:grid-cols-[3fr_4fr]'>
+    <div className='relative h-auto bg-banner bg-cover bg-center'>
+      <div className='grid w-full grid-cols-[3fr_1fr] md:grid-cols-[3fr_3fr] lg:grid-cols-[3fr_4fr]'>
         <div className='px-8 py-[80px]'>
           <Text
             as='h1'

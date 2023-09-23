@@ -12,7 +12,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <HeaderBanner />
         <NavBar />
       </header>
-      <main className='h-full min-h-[100dvh]'>
+      <main className='min-h-[100dvh]'>
         <Notifications />
         {children}
       </main>

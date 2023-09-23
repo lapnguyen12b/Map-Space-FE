@@ -22,6 +22,7 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         trace: "url('/img/footer-sec.jpg')",
+        banner: 'url(/img/header-bg-home.jpg)',
       },
     },
   },

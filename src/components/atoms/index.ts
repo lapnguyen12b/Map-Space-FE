@@ -1,4 +1,5 @@
 export { CardContentHomePage } from './CardContentHomePage';
+export { CardSellingPoint } from './CardSellingPoint';
 export { DefaultBreadcrumb } from './DefaultBreadcrumb';
 export { NavDropDown } from './NavDropDown';
 export { SearchBox } from './SearchBox';
