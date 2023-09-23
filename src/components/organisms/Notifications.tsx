@@ -19,8 +19,6 @@ const ToastifyNotification = ({ title, body }: ToastifyNotificationProps) => (
 export function Notifications() {
   const { fcmToken, notificationPermissionStatus } = useFcmToken();
 
-  console.log('📢 [Notifications.tsx:22]', fcmToken);
-
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       const messaging = getMessaging(firebaseApp);

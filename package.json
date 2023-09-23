@@ -13,6 +13,8 @@
     "@heroicons/react": "^2.0.18",
     "@react-google-maps/api": "^2.19.2",
     "@tanstack/react-query": "^4.33.0",
+    "@tanstack/react-query-devtools": "^4.35.3",
+    "@tanstack/react-query-next-experimental": "^5.0.0-alpha.80",
     "@types/mapbox-gl": "^2.7.14",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
@@ -42,6 +44,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@tanstack/eslint-plugin-query": "^4.34.1",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",

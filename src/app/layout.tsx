@@ -1,13 +1,10 @@
-import { QueryClient } from '@tanstack/react-query';
 import type { Metadata } from 'next';
 import { Inter, Raleway } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
-import { Layout } from 'src/components';
+import { Layout, Providers } from 'src/components';
 import './globals.css';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' });
-
-const queryClient = new QueryClient();
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${inter.variable} ${raleway.variable} font-sans`}>
-        <Toaster position='top-right' reverseOrder={false} />
-        <Layout>{children}</Layout>
+        <Providers>
+          <Toaster position='top-right' reverseOrder={false} />
+          <Layout>{children}</Layout>
+        </Providers>
       </body>
     </html>
   );

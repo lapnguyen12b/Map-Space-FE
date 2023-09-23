@@ -3,12 +3,16 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "picsum.photos",
+        protocol: 'https',
+        hostname: 'picsum.photos',
       },
       {
-        protocol: "http",
-        hostname: "dummyimage.com",
+        protocol: 'https',
+        hostname: 'www.parkhound.com.au',
+      },
+      {
+        protocol: 'http',
+        hostname: 'dummyimage.com',
       },
     ],
   },
