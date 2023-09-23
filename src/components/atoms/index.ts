@@ -3,7 +3,7 @@ export { CardContentHomePage } from './CardContentHomePage';
 export { CardSellingPoint } from './CardSellingPoint';
 export { DefaultBreadcrumb } from './DefaultBreadcrumb';
 export { NavDropDown } from './NavDropDown';
-export { SearchBox } from './SearchBox';
+// export { SearchBar } from './SearchBar';
 export { default as SelectInput } from './SelectInput';
 export { Text } from './Text';
 

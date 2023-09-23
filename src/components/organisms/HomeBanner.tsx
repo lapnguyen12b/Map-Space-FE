@@ -1,4 +1,5 @@
-import { SearchBox, Text } from '..';
+import { Text } from '..';
+import { SearchBar } from '../atoms/SearchBar';
 
 export const HomeBanner = () => {
   return (
@@ -16,7 +17,7 @@ export const HomeBanner = () => {
             space possible — no matter where you are.
           </Text>
 
-          <SearchBox />
+          <SearchBar />
         </div>
         <div />
       </div>
