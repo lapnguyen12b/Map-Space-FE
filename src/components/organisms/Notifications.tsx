@@ -18,6 +18,9 @@ const ToastifyNotification = ({ title, body }: ToastifyNotificationProps) => (
 
 export function Notifications() {
   const { fcmToken, notificationPermissionStatus } = useFcmToken();
+
+  console.log('📢 [Notifications.tsx:22]', fcmToken);
+
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       const messaging = getMessaging(firebaseApp);
@@ -34,19 +37,19 @@ export function Notifications() {
 
   return (
     <>
-      {notificationPermissionStatus && (
+      {/* {notificationPermissionStatus && (
         <div className='absolute right-0 top-0 z-20 h-40 rounded bg-blue-500 px-4 py-2 text-white'>
           <span>The app needs permission to </span>
           <button
             className='font-semibold'
-            onClick={() => {
-              Notification.requestPermission();
+            onClick={async () => {
+              await Notification.requestPermission();
             }}
           >
             enable push notifications.
           </button>
         </div>
-      )}
+      )} */}
     </>
   );
 }

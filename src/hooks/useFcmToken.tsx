@@ -15,6 +15,9 @@ export const useFcmToken = () => {
           // Retrieve the notification permission status
           const permission = await Notification.requestPermission();
           setNotificationPermissionStatus(permission);
+          if (permission === 'denied') {
+            alert('Notifications blocked. Please enable them in your browser.');
+          }
 
           // Check if permission is granted before retrieving the token
           if (permission === 'granted') {
