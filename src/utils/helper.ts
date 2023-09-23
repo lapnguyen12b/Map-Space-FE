@@ -1,21 +1,6 @@
-import { getPlaiceholder } from "plaiceholder";
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-const getBase64 = async (imageUrl: string) => {
-  try {
-   
-    const buffer = await fetch(imageUrl).then(async (res) =>
-      Buffer.from(await res.arrayBuffer())
-    );
-   
-    const { base64 } = await getPlaiceholder(buffer);
-   
-    return base64
-  } catch (err) {
-    if (err instanceof Error) {
-      console.error(err.stack)
-    }
-  }
-   
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
-
-export {getBase64}

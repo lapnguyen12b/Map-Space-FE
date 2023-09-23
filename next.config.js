@@ -1,4 +1,25 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.parkhound.com.au',
+      },
+      {
+        protocol: 'http',
+        hostname: 'dummyimage.com',
+      },
+    ],
+  },
 
-module.exports = nextConfig
+  env: {
+    GOOGLE_MAP_API_KEY: process.env.GOOGLE_MAP_API_KEY,
+  },
+};
+
+module.exports = nextConfig;

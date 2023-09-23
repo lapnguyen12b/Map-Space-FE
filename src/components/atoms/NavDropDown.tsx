@@ -12,7 +12,7 @@ const customTheme: CustomFlowbiteTheme["dropdown"] = {
   },
 };
 
-type NavDropDownProps = {
+export type NavDropDownProps = {
   label: React.ReactNode | string;
   links: NavLink[];
   showArrowIcon?: boolean;

@@ -1,14 +1,26 @@
-import React from "react";
-import NavBar from "../organisms/Navbar";
-import Head from "next/head";
+'use client';
+
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import React from 'react';
+import { Footer, Notifications } from '..';
+import { HeaderBanner } from '../atoms/HeaderBanner';
+import NavBar from '../organisms/Navbar';
 
 type LayoutProps = React.PropsWithChildren;
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <main className="h-screen min-h-screen">
-      <NavBar />
-      {children}
-    </main>
+    <>
+      <header style={{ display: 'unset' }}>
+        <HeaderBanner />
+        <NavBar />
+      </header>
+      <main className='min-h-[100dvh]'>
+        <Notifications />
+        {children}
+      </main>
+      <Footer />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </>
   );
 };
