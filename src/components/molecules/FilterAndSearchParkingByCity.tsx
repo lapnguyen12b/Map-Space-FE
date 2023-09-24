@@ -3,7 +3,6 @@ import React from 'react';
 import { OPTIONS_SEARCH_BY_MONTHLY_DAILY } from 'src/constants';
 import { cn } from 'src/utils';
 import { FilterWrapper, MoreFilter, SelectInput } from '..';
-import { SearchBar } from '../atoms/SearchBar';
 
 export function FilterAndSearchParkingByCity() {
   const [showMoreFilters, setShowMoreFilters] = React.useState(false);
@@ -23,7 +22,7 @@ export function FilterAndSearchParkingByCity() {
     <div className='relative'>
       <div className='relative z-10 grid auto-rows-auto grid-cols-[auto_1fr] gap-5'>
         <SelectInput options={OPTIONS_SEARCH_BY_MONTHLY_DAILY} />
-        <SearchBar />
+        {/* <SearchBar /> */}
       </div>
       <div className='mt-4 flex items-center justify-between'>
         <div className='flex items-center gap-3'>
