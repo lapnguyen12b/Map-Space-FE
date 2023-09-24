@@ -1,21 +1,14 @@
-import {
-  HomeAboutUs,
-  HomeBanner,
-  HomeBetterParking,
-  HomeParkingByCity,
-  HomeParkingRentCalculator,
-} from 'src/components';
-import { HomeMapBanner } from 'src/components/organisms/HomeMapBanner';
+import { HomeBanner } from 'src/components';
 
 export default function Home() {
   return (
     <>
       <HomeBanner />
-      <HomeParkingByCity />
+      {/* <HomeParkingByCity />
       <HomeMapBanner />
       <HomeBetterParking />
       <HomeParkingRentCalculator />
-      <HomeAboutUs />
+      <HomeAboutUs /> */}
     </>
   );
 }

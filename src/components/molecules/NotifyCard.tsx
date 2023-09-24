@@ -8,7 +8,7 @@ type NotifyCardProps = {
   city: string;
 };
 
-const NotifyCard = (props: NotifyCardProps) => {
+export const NotifyCard = (props: NotifyCardProps) => {
   const { city } = props;
   return (
     <div className='flex flex-col gap-2 rounded bg-zinc-800 p-5 text-white'>
@@ -29,5 +29,3 @@ const NotifyCard = (props: NotifyCardProps) => {
     </div>
   );
 };
-
-export default NotifyCard;

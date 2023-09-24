@@ -5,7 +5,7 @@ import { cn } from 'src/utils';
 import { FilterWrapper, MoreFilter, SelectInput } from '..';
 import { SearchBar } from '../atoms/SearchBar';
 
-function FilterAndSearchParkingByCity() {
+export function FilterAndSearchParkingByCity() {
   const [showMoreFilters, setShowMoreFilters] = React.useState(false);
 
   const handleClickMoreFilters = () => {
@@ -46,5 +46,3 @@ function FilterAndSearchParkingByCity() {
     </div>
   );
 }
-
-export default FilterAndSearchParkingByCity;

@@ -1,7 +1,6 @@
 'use client';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
-import React from 'react';
 import MapBox, {
   AttributionControl,
   FullscreenControl,
@@ -9,19 +8,20 @@ import MapBox, {
   NavigationControl,
 } from 'react-map-gl';
 
-const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
+const MAPBOX_ACCESS_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
 
 function Map() {
   return (
     <MapBox
-      mapboxAccessToken={MAPBOX_TOKEN}
+      mapboxAccessToken={MAPBOX_ACCESS_TOKEN}
+      reuseMaps
       initialViewState={{
         longitude: -122.4,
         latitude: 37.8,
-        zoom: 14,
+        zoom: 9,
       }}
       style={{ width: '100%', height: '100%' }}
-      mapStyle='mapbox://styles/mapbox/streets-v9'
+      mapStyle='mapbox://styles/mapbox/streets-v12'
       attributionControl={false}
     >
       <FullscreenControl />
@@ -32,4 +32,4 @@ function Map() {
   );
 }
 
-export default React.memo(Map);
+export default Map;
