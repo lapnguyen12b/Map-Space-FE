@@ -1,7 +1,6 @@
 export { Button } from './Button';
 export { CardContentHomePage } from './CardContentHomePage';
 export { CardSellingPoint } from './CardSellingPoint';
-export { DefaultBreadcrumb } from './DefaultBreadcrumb';
 export { NavDropDown } from './NavDropDown';
 // export { SearchBar } from './SearchBar';
 export { default as SelectInput } from './SelectInput';

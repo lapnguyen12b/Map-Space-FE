@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import colors from 'tailwindcss/colors';
 
 const config: Config = {
   content: [
@@ -11,6 +12,7 @@ const config: Config = {
     colors: {
       'primary-black': 'rgb(60, 72, 85)',
       'primary-blacker': 'rgb(45, 50, 54)',
+      ...colors,
     },
     extend: {
       fontFamily: {

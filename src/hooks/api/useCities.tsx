@@ -1,10 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import ky from 'ky-universal';
 import { ISearchCitiesResponse, ISearchCity } from 'src/types/Cities';
+import { baseUrl } from 'src/utils';
 
 const fetchSearchCities = async (address: string): Promise<ISearchCity[]> => {
   const parsed: ISearchCitiesResponse = await ky(
-    `http://localhost:8080/api/top-cities?address=${address}`
+    `${baseUrl}/api/top-cities?address=${address}`
   ).json();
   return parsed.data.cities;
 };
