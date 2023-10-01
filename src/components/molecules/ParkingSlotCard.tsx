@@ -4,7 +4,6 @@ import { Text } from "../atoms/Text";
 import { TextWithLeftIcon } from "../atoms/TextWithLeftIcon";
 import { BeakerIcon } from "@heroicons/react/24/solid";
 import { Button } from "../atoms/Button";
-import { getBase64 } from "~/utils";
 
 const IMAGE_URL = "https://picsum.photos/id/237/100/100";
 

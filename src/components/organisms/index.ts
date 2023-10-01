@@ -1,2 +1,14 @@
-export { default as Navbar } from "./Navbar";
-export { ParkingSlotAndMap } from "./ParkingSlotAndMap";
+export { CommonQuestions } from './CommonQuestions';
+export { ContentAndParkingInfo } from './ContentAndParkingInfo';
+export { Footer } from './Footer';
+export { HomeAboutUs } from './HomeAboutUs';
+export { HomeBanner } from './HomeBanner';
+export { HomeBetterParking } from './HomeBetterParking';
+export { HomeMapBanner } from './HomeMapBanner';
+export { HomeParkingByCity } from './HomeParkingByCity';
+export { HomeParkingRentCalculator } from './HomeParkingRentCalculator';
+export { Intro } from './Intro';
+export { NavBar } from './Navbar';
+export { Notifications } from './Notifications';
+export { ParkingSlotAndMap } from './ParkingSlotAndMap';
+export { RentingParkingPlace } from './RentingParkingPlace';
