@@ -11,6 +11,10 @@ const nextConfig = {
         hostname: 'www.parkhound.com.au',
       },
       {
+        protocol: 'https',
+        hostname: 'bizweb.dktcdn.net',
+      },
+      {
         protocol: 'http',
         hostname: 'dummyimage.com',
       },

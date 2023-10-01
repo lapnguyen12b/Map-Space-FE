@@ -2,10 +2,10 @@ import {
   HomeAboutUs,
   HomeBanner,
   HomeBetterParking,
+  HomeMapBanner,
   HomeParkingByCity,
   HomeParkingRentCalculator,
 } from 'src/components';
-import { HomeMapBanner } from 'src/components/organisms/HomeMapBanner';
 
 export default function Home() {
   return (

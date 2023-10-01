@@ -6,6 +6,8 @@ import {
   ParkingSlotAndMap,
   RentingParkingPlace,
 } from 'src/components';
+import { DefaultBreadcrumb } from 'src/components/atoms/DefaultBreadcrumb';
+import { BREADCRUMB_PAGE_BY_CITY } from 'src/constants';
 import {
   PARKING_BY_CITY_CONTENT,
   PARKING_BY_CITY_NEARBY,
@@ -15,14 +17,16 @@ function ParkingByCity({ params }: { params: { city: string } }) {
   const { city } = params;
 
   return (
-    <div className='h-[calc(100%_-_62px_-_32px)]'>
-      <ParkingSlotAndMap />
+    <>
+      <div className='h-[calc(100%_-_62px_-_32px)]'>
+        <ParkingSlotAndMap />
+      </div>
 
       <LayoutPage className='pt-3'>
-        {/* <Breadcrumb
+        <DefaultBreadcrumb
           breadcrumbs={BREADCRUMB_PAGE_BY_CITY}
           className='col-span-1 col-start-2 bg-slate-500/10 px-2 py-1'
-        /> */}
+        />
         <Intro className='col-span-1 col-start-2' />
         <CommonQuestions className='col-span-1 col-start-2 mt-10' city={city} />
 
@@ -34,7 +38,7 @@ function ParkingByCity({ params }: { params: { city: string } }) {
           nearbys={PARKING_BY_CITY_NEARBY}
         />
       </LayoutPage>
-    </div>
+    </>
   );
 }
 

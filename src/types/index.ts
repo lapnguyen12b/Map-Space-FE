@@ -1,5 +1,3 @@
-export * from "./Parking";
-
 type Option = {
   value: string;
   label: string;
@@ -20,4 +18,4 @@ type Breadcrumb = {
   icon?: React.FC<React.SVGProps<SVGSVGElement>> | undefined;
 };
 
-export type { Option, FilterDropdown, ClassName, Breadcrumb };
+export type { Breadcrumb, ClassName, FilterDropdown, Option };

@@ -15,7 +15,7 @@ type SearchBox = {
 
 export const SearchBar = (props: SearchBox) => {
   const { className } = props;
-  const classNameMerge = cn(className);
+  const classNameMerge = cn('flex max-w-xl items-center gap-4', className);
 
   const [searchTerm, setSearchTerm] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
@@ -44,7 +44,7 @@ export const SearchBar = (props: SearchBox) => {
   };
 
   return (
-    <div className='flex max-w-xl items-center gap-4'>
+    <div className={classNameMerge}>
       <div className='relative flex-1'>
         <TextInput
           icon={BsSearch}

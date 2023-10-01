@@ -1,7 +1,9 @@
 'use client';
 
+import { Breadcrumb } from 'flowbite-react';
 import { Breadcrumb as BreadcrumbType } from 'src/types';
 import { cn } from 'src/utils';
+import { Text } from '.';
 
 type BreadcrumbProps = {
   breadcrumbs: BreadcrumbType[];
@@ -17,19 +19,18 @@ export const DefaultBreadcrumb = ({
   classNameBreadcrumbItemText,
 }: BreadcrumbProps) => {
   const classNameMerge = cn(className);
-  return null;
-  // return (
-  //   <BaseBreadcrumb className={classNameMerge}>
-  //     {breadcrumbs.map((b, index) => (
-  //       <BaseBreadcrumb.Item
-  //         key={`breadcrumb-${b.name}`}
-  //         href={index !== breadcrumbs.length - 1 ? b.href : undefined}
-  //         icon={b.icon}
-  //         className={cn(classNameBreadcrumbItem)}
-  //       >
-  //         <Text className={cn(classNameBreadcrumbItemText)}>{b.name}</Text>
-  //       </BaseBreadcrumb.Item>
-  //     ))}
-  //   </BaseBreadcrumb>
-  // );
+  return (
+    <Breadcrumb className={classNameMerge}>
+      {breadcrumbs.map((b, index) => (
+        <Breadcrumb.Item
+          key={`breadcrumb-${b.name}`}
+          href={index !== breadcrumbs.length - 1 ? b.href : undefined}
+          icon={b.icon}
+          className={cn(classNameBreadcrumbItem)}
+        >
+          <Text className={cn(classNameBreadcrumbItemText)}>{b.name}</Text>
+        </Breadcrumb.Item>
+      ))}
+    </Breadcrumb>
+  );
 };

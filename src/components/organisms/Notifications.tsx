@@ -4,18 +4,6 @@ import { useEffect } from 'react';
 import { useFcmToken } from 'src/hooks';
 import firebaseApp from 'src/utils/firebase';
 
-type ToastifyNotificationProps = {
-  title: string;
-  body: string;
-};
-
-const ToastifyNotification = ({ title, body }: ToastifyNotificationProps) => (
-  <div className='push-notification'>
-    <h2 className='push-notification-title'>{title}</h2>
-    <p className='push-notification-text'>{body}</p>
-  </div>
-);
-
 export function Notifications() {
   const { fcmToken, notificationPermissionStatus } = useFcmToken();
 
@@ -33,21 +21,5 @@ export function Notifications() {
     }
   }, []);
 
-  return (
-    <>
-      {/* {notificationPermissionStatus && (
-        <div className='absolute right-0 top-0 z-20 h-40 rounded bg-blue-500 px-4 py-2 text-white'>
-          <span>The app needs permission to </span>
-          <button
-            className='font-semibold'
-            onClick={async () => {
-              await Notification.requestPermission();
-            }}
-          >
-            enable push notifications.
-          </button>
-        </div>
-      )} */}
-    </>
-  );
+  return <div>aa</div>;
 }

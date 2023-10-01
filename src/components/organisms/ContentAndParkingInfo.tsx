@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  ClassName,
-  ParkingByCityContent,
-  ParkingByCityNearby,
-} from 'src/types';
+import { ClassName } from 'src/types';
+import { ParkingByCityContent, ParkingByCityNearby } from 'src/types/Parking';
 import { cn } from 'src/utils';
 import { Text } from '..';
 

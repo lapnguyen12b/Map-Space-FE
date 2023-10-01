@@ -1,6 +1,5 @@
 import {
   FilterAndSearchParkingByCity,
-  Map,
   NotifyCard,
   PaginationFooter,
   ParkingSlotCard,
@@ -26,9 +25,7 @@ export const ParkingSlotAndMap = () => {
           <PaginationFooter />
         </div>
       </section>
-      <section className='order-1 xl:order-none'>
-        <Map />
-      </section>
+      <section className='order-1 xl:order-none'>{/* <Map /> */}</section>
     </div>
   );
 };

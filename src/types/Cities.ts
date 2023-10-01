@@ -14,6 +14,21 @@ export interface ISearchCity {
   };
 }
 
+export interface ICommon {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface ITopCityResponse extends ICommon {
+  status: string;
+  cityName: string;
+  lat: string;
+  lng: string;
+  url: string;
+  imageUrl: string;
+}
+
 export interface ISearchCitiesResponse {
   status: 'success' | 'error';
   data: {
