@@ -15,4 +15,8 @@ const URLS = {
   CITY_TOP: '/city-capital/top',
 };
 
-export { OPTIONS_SEARCH_BY_MONTHLY_DAILY, URLS };
+const QUERY_KEYS = {
+  SEARCH_CITY: 'search-city',
+};
+
+export { OPTIONS_SEARCH_BY_MONTHLY_DAILY, QUERY_KEYS, URLS };

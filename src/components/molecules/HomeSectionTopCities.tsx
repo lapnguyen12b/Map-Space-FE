@@ -1,3 +1,5 @@
+import { URLS } from 'src/constants';
+import { ITopCityResponse } from 'src/types/Cities';
 import { cn } from 'src/utils';
 import { CardTopCity } from '.';
 
@@ -5,7 +7,22 @@ type HomeSectionTopCitiesProps = {
   classNameWrapper?: string;
 };
 
-export const HomeSectionTopCities = (props: HomeSectionTopCitiesProps) => {
+async function getTopCities() {
+  const res = await fetch(`${process.env.DOMAN_BE}${URLS.CITY_TOP}`);
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+}
+
+export const HomeSectionTopCities = async (
+  props: HomeSectionTopCitiesProps
+) => {
   const { classNameWrapper } = props;
 
   const classNameWrapperMerge = cn(
@@ -13,13 +30,13 @@ export const HomeSectionTopCities = (props: HomeSectionTopCitiesProps) => {
     classNameWrapper
   );
 
+  const topCities: ITopCityResponse[] = await getTopCities();
+
   return (
     <div className={classNameWrapperMerge}>
-      {Array(16)
-        .fill(1)
-        .map((_, index) => (
-          <CardTopCity key={index} cityName={String(index)} url='#' />
-        ))}
+      {topCities.map((city) => (
+        <CardTopCity key={city.id} city={city} />
+      ))}
     </div>
   );
 };
