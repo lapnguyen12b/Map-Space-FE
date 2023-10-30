@@ -1,12 +1,9 @@
 import axios from 'axios';
-import { isProduction } from 'src/utils';
 
-const BASE_URL = isProduction
-  ? 'https://hala-express.click/api'
-  : process.env.DOMAN_BE;
+const DOMAN_BE = process.env.DOMAN_BE;
 
 const instance = axios.create({
-  baseURL: BASE_URL,
+  baseURL: DOMAN_BE,
   timeout: 1000,
   headers: { Accept: 'application/json' },
 });
