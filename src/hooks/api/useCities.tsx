@@ -8,6 +8,7 @@ import {
 } from 'src/types/Cities';
 import { baseUrl } from 'src/utils';
 
+const domain = process.env.DOMAN_BE
 const fetchSearchCities = async (address: string): Promise<ISearchCity[]> => {
   const response: ISearchCitiesResponse = await apiClient.get(
     `${baseUrl}/api/top-cities?address=${address}`
