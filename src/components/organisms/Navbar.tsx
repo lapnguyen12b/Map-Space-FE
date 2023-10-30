@@ -2,8 +2,9 @@
 
 import { Navbar as BaseNavBar, Button } from 'flowbite-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { TOP_CITIES_LINKS } from 'src/constants';
-import { NavDropDown } from '../atoms';
+import { NavDropDown, Text } from '../atoms';
 
 export function NavBar() {
   return (
@@ -29,6 +30,11 @@ export function NavBar() {
           <NavDropDown label='Top Cities' links={TOP_CITIES_LINKS} />
           <NavDropDown label='Help' links={TOP_CITIES_LINKS} />
         </BaseNavBar.Collapse>
+        <Link href={'/auth'}>
+          <Text variant='h3' className=''>
+            Login
+          </Text>
+        </Link>
       </div>
     </BaseNavBar>
   );
